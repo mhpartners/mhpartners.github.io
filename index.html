@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MHPartners — High-Performance Android Development Studio</title>
+  <meta name="description" content="Official portfolio and privacy policy portal for MHPartners Android development studio. Focused native mobile utilities, input keyboards, and personalization apps engineered for performance and privacy." />
+  <link rel="canonical" href="https://mhpartners.github.io/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="/vendor/lucide/lucide.min.js"></script>
+
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="/_astro/analytics.38e7SdKz.css" />
+  <link rel="stylesheet" href="/_astro/privacy-policy_html.egNjK4K9.css" />
+
+  <style>
+    :root {
+      --color-primary: #F59E0B;
+      --color-secondary: #18181C;
+      --color-accent: #38BDF8;
+      --color-bg: #0A0B0E;
+      --color-card: #12151B;
+      --color-text: #F3F4F6;
+      --color-border: rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-heading {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .glow-primary {
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0) 70%);
+    }
+
+    .glow-accent {
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(56, 189, 248, 0) 70%);
+    }
+
+    .atelier-card {
+      background-color: var(--color-card);
+      border: 1px solid var(--color-border);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .atelier-card:hover {
+      border-color: rgba(245, 158, 11, 0.35);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-500/20 selection:text-amber-300">
+
+  <!-- TOP AMBIENT GLOWS -->
+  <div class="fixed top-0 left-1/4 -translate-x-1/2 -top-40 size-[550px] rounded-full glow-primary blur-3xl opacity-30 pointer-events-none z-0"></div>
+  <div class="fixed top-20 right-10 size-[450px] rounded-full glow-accent blur-3xl opacity-20 pointer-events-none z-0"></div>
+
+  <!-- STICKY NAVIGATION -->
+  <header class="sticky top-0 z-50 border-b border-white/[0.08] backdrop-blur-xl bg-[#0A0B0E]/80 transition-all">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Studio Logo -->
+      <a href="/" class="group flex items-center gap-3">
+        <img
+          src="/studio-assets/mhpartners-logo.svg"
+          alt="MHPartners"
+          class="h-9 sm:h-10 w-auto max-w-[220px] object-contain transition-transform duration-200 group-hover:scale-105"
+        />
+      </a>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a
+          href="#apps"
+          class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-300 hover:text-white px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 transition-colors"
+        >
+          <i data-lucide="layers" class="size-3.5"></i>
+          <span>App Showcase</span>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/developer?id=MHPartners&pli=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-black bg-amber-400 hover:bg-amber-300 px-3.5 py-2 rounded-xl transition-colors shadow-lg shadow-amber-500/10"
+        >
+          <i data-lucide="play" class="size-3.5 fill-current"></i>
+          <span>Google Play</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <main class="relative z-10 flex-grow max-w-7xl mx-auto px-6 sm:px-8 pt-12 sm:pt-20 pb-24 w-full">
+    
+    <div class="space-y-6 max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-mono font-semibold">
+        <span class="size-2 rounded-full bg-amber-400 animate-pulse"></span>
+        <span>MHPartners Mobile Studio</span>
+      </div>
+
+      <h1 class="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+        High-Performance <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500 bg-clip-text text-transparent">Android Utilities</span> &amp; Keyboards
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+        MHPartners engineers focused, lightweight mobile applications for millions of Android users worldwide. From intelligent multilingual keyboards to reactive utility sensors and live 3D personalization, our apps prioritize sub-millisecond responsiveness and 100% on-device data privacy.
+      </p>
+
+      <!-- Trust Badges Row -->
+      <div class="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shield-check" class="size-4 text-emerald-400"></i>
+          <span>100% Local On-Device Privacy</span>
+        </div>
+        <span class="text-slate-600">•</span>
+        <div class="flex items-center gap-2">
+          <i data-lucide="zap" class="size-4 text-amber-400"></i>
+          <span>Native Kotlin Performance</span>
+        </div>
+        <span class="text-slate-600">•</span>
+        <div class="flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="size-4 text-blue-400"></i>
+          <span>Google Play Verified</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- APP TILES GRID -->
+    <section id="apps" class="pt-16 sm:pt-24 space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/[0.08] pb-6">
+        <div>
+          <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase">
+            APPLICATION SHOWCASE
+          </span>
+          <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-white mt-1">
+            Studio Releases &amp; Privacy Policies
+          </h2>
+        </div>
+        <p class="text-xs font-mono text-slate-400">
+          Showing 7 production applications
+        </p>
+      </div>
+
+      <!-- Grid of 7 Apps -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+    <article class="atelier-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300 shadow-xl relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute -top-24 -right-24 size-48 rounded-full glow-primary blur-3xl opacity-0 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
+
+      <div class="space-y-5">
+        <!-- Header: Icon + Category + Package -->
+        <div class="flex items-start gap-4">
+          <div class="size-16 sm:size-20 rounded-2xl bg-amber-500/10 border border-amber-500/25 p-1 shrink-0 group-hover:scale-105 transition-transform shadow-inner overflow-hidden flex items-center justify-center">
+            <img 
+              src="/studio-assets/cAb5RMm0Zol.jpeg" 
+              alt="3D Fingerprint Lock Animation Icon" 
+              class="w-full h-full object-cover rounded-xl"
+              onerror="this.onerror=null; this.src='/studio-assets/cAb5RMm0Zol.jpeg';"
+            />
+          </div>
+          <div class="space-y-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                Personalization & Customization
+              </span>
+              <span class="text-[10px] font-mono text-slate-500">
+                v1.0.0
+              </span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              3D Fingerprint Lock Animation
+            </h3>
+            <p class="text-[11px] font-mono text-slate-400 truncate">
+              net.vertexapps.fingerprint
+            </p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed line-clamp-3">
+          3D Fingerprint Lock Animation brings stunning neon, cyber, and particle unlock animations to your lock screen paired with dynamic 4K live wallpapers and zero biometric data collection.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">3D Animations</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">4K Live Wallpapers</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">In-Display Sensor</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">AMOLED Glow</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Zero Biometric Access</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between gap-3">
+        <a 
+          href="/apps/fingerprint-animations/" 
+          class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2 rounded-xl transition-all"
+        >
+          <span>App Details</span>
+          <i data-lucide="arrow-right" class="size-3.5"></i>
+        </a>
+        <a 
+          href="/apps/fingerprint-animations/privacy-policy.html" 
+          class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:text-amber-300 px-3 py-2 rounded-xl hover:bg-amber-500/10 transition-colors border border-amber-500/20"
+        >
+          <i data-lucide="shield-check" class="size-3.5"></i>
+          <span>Privacy Policy</span>
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="atelier-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300 shadow-xl relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute -top-24 -right-24 size-48 rounded-full glow-primary blur-3xl opacity-0 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
+
+      <div class="space-y-5">
+        <!-- Header: Icon + Category + Package -->
+        <div class="flex items-start gap-4">
+          <div class="size-16 sm:size-20 rounded-2xl bg-amber-500/10 border border-amber-500/25 p-1 shrink-0 group-hover:scale-105 transition-transform shadow-inner overflow-hidden flex items-center justify-center">
+            <img 
+              src="/studio-assets/image-HKfdzo0XhbI.png" 
+              alt="AI Pashto Keyboard Icon" 
+              class="w-full h-full object-cover rounded-xl"
+              onerror="this.onerror=null; this.src='/studio-assets/cAb5RMm0Zol.jpeg';"
+            />
+          </div>
+          <div class="space-y-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                Productivity & Utilities
+              </span>
+              <span class="text-[10px] font-mono text-slate-500">
+                v1.0.0
+              </span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              AI Pashto Keyboard
+            </h3>
+            <p class="text-[11px] font-mono text-slate-400 truncate">
+              net.vertexapps.pashtokeyboard
+            </p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed line-clamp-3">
+          AI Pashto Keyboard is a smart dual-language keyboard for Android with intelligent suggestions, full Pashto special characters, voice typing, custom themes, and complete offline privacy.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">AI Writing Assistant</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Pashto Alphabet (ښ, ږ, څ)</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Dual Voice Typing</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">100+ Themes</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Zero Logging</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between gap-3">
+        <a 
+          href="/apps/pashto-keyboard/" 
+          class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2 rounded-xl transition-all"
+        >
+          <span>App Details</span>
+          <i data-lucide="arrow-right" class="size-3.5"></i>
+        </a>
+        <a 
+          href="/apps/pashto-keyboard/privacy-policy.html" 
+          class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:text-amber-300 px-3 py-2 rounded-xl hover:bg-amber-500/10 transition-colors border border-amber-500/20"
+        >
+          <i data-lucide="shield-check" class="size-3.5"></i>
+          <span>Privacy Policy</span>
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="atelier-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300 shadow-xl relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute -top-24 -right-24 size-48 rounded-full glow-primary blur-3xl opacity-0 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
+
+      <div class="space-y-5">
+        <!-- Header: Icon + Category + Package -->
+        <div class="flex items-start gap-4">
+          <div class="size-16 sm:size-20 rounded-2xl bg-amber-500/10 border border-amber-500/25 p-1 shrink-0 group-hover:scale-105 transition-transform shadow-inner overflow-hidden flex items-center justify-center">
+            <img 
+              src="/studio-assets/image-HKfdzo0XhbI.png" 
+              alt="Smart LED Keyboard Neon Themes Icon" 
+              class="w-full h-full object-cover rounded-xl"
+              onerror="this.onerror=null; this.src='/studio-assets/cAb5RMm0Zol.jpeg';"
+            />
+          </div>
+          <div class="space-y-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                Personalization & Utilities
+              </span>
+              <span class="text-[10px] font-mono text-slate-500">
+                v1.0.0
+              </span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              Smart LED Keyboard Neon Themes
+            </h3>
+            <p class="text-[11px] font-mono text-slate-400 truncate">
+              net.vertexapps.neonkeyboard
+            </p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed line-clamp-3">
+          Smart LED Keyboard Neon Themes is a vibrant RGB keyboard for Android featuring dynamic glowing themes, mechanical sound effects, AI writing tools, and complete offline privacy.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Dynamic RGB Waves</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">100+ Neon Themes</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Mechanical Audio</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">AI Assistant</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">100% Offline</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between gap-3">
+        <a 
+          href="/apps/neon-led-keyboard/" 
+          class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2 rounded-xl transition-all"
+        >
+          <span>App Details</span>
+          <i data-lucide="arrow-right" class="size-3.5"></i>
+        </a>
+        <a 
+          href="/apps/neon-led-keyboard/privacy-policy.html" 
+          class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:text-amber-300 px-3 py-2 rounded-xl hover:bg-amber-500/10 transition-colors border border-amber-500/20"
+        >
+          <i data-lucide="shield-check" class="size-3.5"></i>
+          <span>Privacy Policy</span>
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="atelier-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300 shadow-xl relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute -top-24 -right-24 size-48 rounded-full glow-primary blur-3xl opacity-0 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
+
+      <div class="space-y-5">
+        <!-- Header: Icon + Category + Package -->
+        <div class="flex items-start gap-4">
+          <div class="size-16 sm:size-20 rounded-2xl bg-amber-500/10 border border-amber-500/25 p-1 shrink-0 group-hover:scale-105 transition-transform shadow-inner overflow-hidden flex items-center justify-center">
+            <img 
+              src="/studio-assets/image-HKfdzo0XhbI.png" 
+              alt="Bangla Keyboard with English Icon" 
+              class="w-full h-full object-cover rounded-xl"
+              onerror="this.onerror=null; this.src='/studio-assets/cAb5RMm0Zol.jpeg';"
+            />
+          </div>
+          <div class="space-y-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                Productivity & Utilities
+              </span>
+              <span class="text-[10px] font-mono text-slate-500">
+                v1.0.0
+              </span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              Bangla Keyboard with English
+            </h3>
+            <p class="text-[11px] font-mono text-slate-400 truncate">
+              net.vertexapps.banglakeyboard
+            </p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed line-clamp-3">
+          Bangla Keyboard with English is a smart dual-language keyboard for Android with intelligent suggestions, full Bangla vowels & Yuktakkhor, voice typing, custom themes, and complete privacy.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Bangla & English</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Yuktakkhor (যুক্তাক্ষর)</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Voice Typing</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">In-Chat Translator</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Private Mode</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between gap-3">
+        <a 
+          href="/apps/bangla-keyboard/" 
+          class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2 rounded-xl transition-all"
+        >
+          <span>App Details</span>
+          <i data-lucide="arrow-right" class="size-3.5"></i>
+        </a>
+        <a 
+          href="/apps/bangla-keyboard/privacy-policy.html" 
+          class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:text-amber-300 px-3 py-2 rounded-xl hover:bg-amber-500/10 transition-colors border border-amber-500/20"
+        >
+          <i data-lucide="shield-check" class="size-3.5"></i>
+          <span>Privacy Policy</span>
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="atelier-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300 shadow-xl relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute -top-24 -right-24 size-48 rounded-full glow-primary blur-3xl opacity-0 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
+
+      <div class="space-y-5">
+        <!-- Header: Icon + Category + Package -->
+        <div class="flex items-start gap-4">
+          <div class="size-16 sm:size-20 rounded-2xl bg-amber-500/10 border border-amber-500/25 p-1 shrink-0 group-hover:scale-105 transition-transform shadow-inner overflow-hidden flex items-center justify-center">
+            <img 
+              src="/studio-assets/image-HKfdzo0XhbI.png" 
+              alt="Amharic Keyboard Ethiopia Icon" 
+              class="w-full h-full object-cover rounded-xl"
+              onerror="this.onerror=null; this.src='/studio-assets/cAb5RMm0Zol.jpeg';"
+            />
+          </div>
+          <div class="space-y-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                Productivity & Utilities
+              </span>
+              <span class="text-[10px] font-mono text-slate-500">
+                v1.0.0
+              </span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              Amharic Keyboard Ethiopia
+            </h3>
+            <p class="text-[11px] font-mono text-slate-400 truncate">
+              net.vertexapps.amharickeyboard
+            </p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed line-clamp-3">
+          Amharic Keyboard Ethiopia is an intelligent dual-language keyboard for Android with full Ge'ez Fidel (ፊደል) script, Ethiopic numerals, smart word prediction, voice typing, and complete offline privacy.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Ge'ez Fidel (ፊደል)</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Ethiopic Numerals (፩, ፪)</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">AI Assistant</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Bilingual Voice</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Cultural Themes</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between gap-3">
+        <a 
+          href="/apps/amharic-keyboard/" 
+          class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2 rounded-xl transition-all"
+        >
+          <span>App Details</span>
+          <i data-lucide="arrow-right" class="size-3.5"></i>
+        </a>
+        <a 
+          href="/apps/amharic-keyboard/privacy-policy.html" 
+          class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:text-amber-300 px-3 py-2 rounded-xl hover:bg-amber-500/10 transition-colors border border-amber-500/20"
+        >
+          <i data-lucide="shield-check" class="size-3.5"></i>
+          <span>Privacy Policy</span>
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="atelier-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300 shadow-xl relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute -top-24 -right-24 size-48 rounded-full glow-primary blur-3xl opacity-0 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
+
+      <div class="space-y-5">
+        <!-- Header: Icon + Category + Package -->
+        <div class="flex items-start gap-4">
+          <div class="size-16 sm:size-20 rounded-2xl bg-amber-500/10 border border-amber-500/25 p-1 shrink-0 group-hover:scale-105 transition-transform shadow-inner overflow-hidden flex items-center justify-center">
+            <img 
+              src="/studio-assets/flash-notifications-icon.png" 
+              alt="Flash Alert & LED Flashlight Icon" 
+              class="w-full h-full object-cover rounded-xl"
+              onerror="this.onerror=null; this.src='/studio-assets/cAb5RMm0Zol.jpeg';"
+            />
+          </div>
+          <div class="space-y-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                Tools & Utilities
+              </span>
+              <span class="text-[10px] font-mono text-slate-500">
+                v1.0.0
+              </span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              Flash Alert & LED Flashlight
+            </h3>
+            <p class="text-[11px] font-mono text-slate-400 truncate">
+              net.vertexapps.flashnotifications
+            </p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed line-clamp-3">
+          Flash Alert & LED Flashlight provides instant LED flashlight alerts for incoming calls, SMS texts, and app notifications with customizable blink rhythms, battery saver rules, and zero tracking.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">LED Call Alerts</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Custom Blink Designer</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Per-App Flashing</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Battery Saver Rules</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Morse SOS</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between gap-3">
+        <a 
+          href="/apps/flash-notifications/" 
+          class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2 rounded-xl transition-all"
+        >
+          <span>App Details</span>
+          <i data-lucide="arrow-right" class="size-3.5"></i>
+        </a>
+        <a 
+          href="/apps/flash-notifications/privacy-policy.html" 
+          class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:text-amber-300 px-3 py-2 rounded-xl hover:bg-amber-500/10 transition-colors border border-amber-500/20"
+        >
+          <i data-lucide="shield-check" class="size-3.5"></i>
+          <span>Privacy Policy</span>
+        </a>
+      </div>
+    </article>
+  
+
+    <article class="atelier-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300 shadow-xl relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute -top-24 -right-24 size-48 rounded-full glow-primary blur-3xl opacity-0 group-hover:opacity-30 transition-opacity pointer-events-none"></div>
+
+      <div class="space-y-5">
+        <!-- Header: Icon + Category + Package -->
+        <div class="flex items-start gap-4">
+          <div class="size-16 sm:size-20 rounded-2xl bg-amber-500/10 border border-amber-500/25 p-1 shrink-0 group-hover:scale-105 transition-transform shadow-inner overflow-hidden flex items-center justify-center">
+            <img 
+              src="/studio-assets/image-HKfdzo0XhbI.png" 
+              alt="Find Your Phone with Clap Icon" 
+              class="w-full h-full object-cover rounded-xl"
+              onerror="this.onerror=null; this.src='/studio-assets/cAb5RMm0Zol.jpeg';"
+            />
+          </div>
+          <div class="space-y-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                Utilities & Security
+              </span>
+              <span class="text-[10px] font-mono text-slate-500">
+                v1.0.0
+              </span>
+            </div>
+            <h3 class="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+              Find Your Phone with Clap
+            </h3>
+            <p class="text-[11px] font-mono text-slate-400 truncate">
+              net.vertexapps.claptofind
+            </p>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed line-clamp-3">
+          Find Your Phone with Clap is a smart Android phone finder and anti-theft alarm utility. Find your phone with a clap, customize preset or manual audio alarms, and secure your device with charger unplug alerts.
+        </p>
+
+        <!-- Feature Tags -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Clap Detection</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Custom Audio Upload</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Charger Unplug Alarm</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">Silent Mode Override</span><span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/5 text-slate-400">100% Private</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between gap-3">
+        <a 
+          href="/apps/find-phone-with-clap/" 
+          class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2 rounded-xl transition-all"
+        >
+          <span>App Details</span>
+          <i data-lucide="arrow-right" class="size-3.5"></i>
+        </a>
+        <a 
+          href="/apps/find-phone-with-clap/privacy-policy.html" 
+          class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-400 hover:text-amber-300 px-3 py-2 rounded-xl hover:bg-amber-500/10 transition-colors border border-amber-500/20"
+        >
+          <i data-lucide="shield-check" class="size-3.5"></i>
+          <span>Privacy Policy</span>
+        </a>
+      </div>
+    </article>
+  
+      </div>
+    </section>
+
+    <!-- STUDIO PRIVACY COMMITMENT BANNER -->
+    <section class="mt-20 sm:mt-28 atelier-card rounded-3xl p-8 sm:p-12 border-amber-500/20 bg-gradient-to-br from-amber-500/[0.04] via-[#12151B] to-[#0A0B0E] space-y-6">
+      <div class="flex items-start gap-4">
+        <div class="size-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0">
+          <i data-lucide="shield-alert" class="size-6"></i>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-heading text-xl sm:text-2xl font-bold text-white">
+            Our Atelier Privacy &amp; Data Ethics Manifesto
+          </h3>
+          <p class="text-sm text-slate-300 font-light leading-relaxed max-w-4xl">
+            At MHPartners, we adhere to the strict principle of zero unnecessary surveillance. We believe modern mobile utilities must respect user sanctuary. None of our keyboard applications record or transmit keystrokes, our acoustic utilities discard sound data ephemerally in RAM, and our personalization apps never read biometric enclave data. All application records remain under your perpetual hardware control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT INQUIRIES -->
+    <section id="contact" class="mt-16 atelier-card rounded-2xl p-6 sm:p-8 space-y-4">
+      <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+        <i data-lucide="mail" class="size-5 text-amber-400"></i>
+        <span>Developer Support &amp; Policy Inquiries</span>
+      </h3>
+      <p class="text-xs sm:text-sm text-slate-300 font-light">
+        For technical support, privacy disclosures, or publisher inquiries regarding our Android applications, please contact our engineering studio directly:
+      </p>
+      <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 font-mono text-xs text-slate-300 space-y-1.5">
+        <div><strong>Studio:</strong> MHPartners Android Development Studio</div>
+        <div><strong>Developer Account:</strong> <a href="https://play.google.com/store/apps/developer?id=MHPartners&pli=1" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline">MHPartners (Google Play)</a></div>
+        <div><strong>Support Email:</strong> <a href="mailto:support@mhpartners.com" class="text-amber-400 hover:underline">support@mhpartners.com</a></div>
+        <div><strong>AdMob Publisher:</strong> pub-1041442504580367 (<a href="/app-ads.txt" class="text-amber-400 hover:underline">app-ads.txt</a>)</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ATELIER FOOTER -->
+  <footer class="border-t border-white/[0.08] bg-[#0A0B0E] py-12 px-6 sm:px-8 relative z-10 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Brand -->
+      <div class="flex items-center gap-3">
+        <a href="/" class="inline-block transition-transform hover:scale-105">
+          <img
+            src="/studio-assets/mhpartners-logo.svg"
+            alt="MHPartners"
+            class="h-7 sm:h-8 w-auto max-w-[180px] object-contain"
+          />
+        </a>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-wrap justify-center gap-6 font-mono text-slate-400">
+        <a href="/" class="hover:text-white transition-colors">Studio</a>
+        <a href="#apps" class="hover:text-white transition-colors">Applications</a>
+        <a href="https://play.google.com/store/apps/developer?id=MHPartners&pli=1" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">Google Play Console</a>
+        <a href="/app-ads.txt" class="hover:text-white transition-colors">app-ads.txt</a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="font-mono text-slate-500 text-center md:text-right text-[11px]">
+        &copy; 2026 MHPartners. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lucide Icon Hydration -->
+  <script>
+    function initLucide() {
+      if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+      }
+    }
+    initLucide();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLucide);
+    }
+  </script>
+</body>
+</html>

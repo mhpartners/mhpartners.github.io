@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none">
+  <defs>
+    <linearGradient id="mhGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="mhGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram Shield -->
+  <rect x="4" y="8" width="48" height="48" rx="14" fill="#12151B" stroke="rgba(245, 158, 11, 0.35)" stroke-width="1.5" />
+  <rect x="7" y="11" width="42" height="42" rx="11" fill="url(#mhGlow)" />
+  
+  <!-- Stylized M & H -->
+  <path d="M16 41V23L23 32L30 23V41" stroke="url(#mhGold)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M34 23V41M44 23V41M34 32H44" stroke="#FFFFFF" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Studio Wordmark -->
+  <text x="64" y="32" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">
+    MH<tspan fill="#F59E0B">PARTNERS</tspan>
+  </text>
+  <text x="64" y="46" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#94A3B8" letter-spacing="2.5">
+    ANDROID ATELIER
+  </text>
+</svg>
