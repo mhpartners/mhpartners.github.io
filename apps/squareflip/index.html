@@ -1,31 +1,431 @@
-<!DOCTYPE html><html lang="en" class="scroll-smooth" style="--color-primary: #F59E0B; --color-secondary: #18181C; --color-accent: #38BDF8; --color-bg: #0A0B0E; --color-card: #12151B; --color-text: #F3F4F6;" data-astro-cid-7da3lww3> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Square Flip — MHPartners</title><meta name="description" content="Square Flip is a captivating minimalist puzzle game for Android. Flip adjacent tiles, match color patterns, solve clever grid logic stages, and enjoy 100% offline casual gameplay with zero telemetry."><!-- Favicon / Site Icon --><link rel="icon" href="/studio-assets/cAb5RMm0Zol.jpeg"><link rel="apple-touch-icon" href="/studio-assets/cAb5RMm0Zol.jpeg"><!-- Preconnect and Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><!-- Lucide Icons --><script src="/vendor/lucide/lucide.min.js"></script><!-- Theme Styles --><link rel="stylesheet" href="/assets/analytics.38e7SdKz.css">
+<!DOCTYPE html><html lang="en" class="scroll-smooth" style="--color-primary: #F59E0B; --color-secondary: #18181C; --color-accent: #38BDF8; --color-bg: #0A0B0E; --color-card: #12151B; --color-text: #F3F4F6;" data-astro-cid-7da3lww3> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Square Flip — MHPartners</title><meta name="description" content="Square Flip is an addictive neon puzzle game for Android. Draw squares to flip tiles, turn the board white, solve 120 Classic levels, recreate 20 Mosaic Art shapes, and race the clock in 60-second Blitz Rush runs."><!-- Favicon / Site Icon --><link rel="icon" href="/studio-assets/cAb5RMm0Zol.jpeg"><link rel="apple-touch-icon" href="/studio-assets/cAb5RMm0Zol.jpeg"><!-- Preconnect and Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><!-- Lucide Icons --><script src="/vendor/lucide/lucide.min.js"></script><!-- Theme Styles --><link rel="stylesheet" href="/assets/analytics.38e7SdKz.css">
 <link rel="stylesheet" href="/assets/privacy-policy_html.egNjK4K9.css">
 <style>body{background-color:var(--color-bg);color:var(--color-text);font-family:Inter,sans-serif;overflow-x:hidden}.font-heading[data-astro-cid-7da3lww3]{font-family:Space Grotesk,sans-serif}.font-serif[data-astro-cid-7da3lww3]{font-family:Playfair Display,Georgia,serif}.font-mono[data-astro-cid-7da3lww3]{font-family:JetBrains Mono,monospace}.atelier-card[data-astro-cid-7da3lww3]{background-color:var(--color-card);border:1px solid rgba(255,255,255,.08);transition:all .3s cubic-bezier(.16,1,.3,1)}.atelier-card[data-astro-cid-7da3lww3]:hover{border-color:#f59e0b59}.glow-primary[data-astro-cid-7da3lww3]{background:radial-gradient(circle,#f59e0b26,#f59e0b00 70%)}.glow-accent[data-astro-cid-7da3lww3]{background:radial-gradient(circle,#38bdf81f,#38bdf800 70%)}.bg-grid[data-astro-cid-7da3lww3]{background-size:40px 40px;background-image:linear-gradient(to right,rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.02) 1px,transparent 1px)}.gallery-scroller[data-astro-cid-7da3lww3]::-webkit-scrollbar{height:6px}.gallery-scroller[data-astro-cid-7da3lww3]::-webkit-scrollbar-track{background:#ffffff08;border-radius:3px}.gallery-scroller[data-astro-cid-7da3lww3]::-webkit-scrollbar-thumb{background:#272c38;border-radius:3px}.gallery-scroller[data-astro-cid-7da3lww3]::-webkit-scrollbar-thumb:hover{background:var(--color-primary)}
 </style>  <script src="https://cdn.tailwindcss.com"></script>
-</head> <body class="selection:bg-amber-500/30 selection:text-amber-200" data-astro-cid-7da3lww3> <div class="fixed inset-0 bg-grid pointer-events-none -z-20" data-astro-cid-7da3lww3></div> <!-- Ambient Backdrop Lights --> <div class="fixed top-0 left-1/4 size-[600px] rounded-full glow-primary pointer-events-none -z-10 blur-3xl opacity-50" data-astro-cid-7da3lww3></div> <div class="fixed top-1/3 right-10 size-[500px] rounded-full glow-accent pointer-events-none -z-10 blur-3xl opacity-40" data-astro-cid-7da3lww3></div> <!-- Header --> <header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#0A0B0E]/85 backdrop-blur-xl" data-astro-cid-7da3lww3> <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-8" data-astro-cid-7da3lww3> <!-- Brand Logo (Full SVG from Backend) --> <a href="/" class="group flex items-center" title="MHPartners" data-astro-cid-7da3lww3> <img src="/studio-assets/mhpartners-logo.svg" alt="MHPartners" class="h-9 sm:h-10 w-auto max-w-[220px] object-contain transition-transform duration-200 group-hover:scale-105" onerror="this.onerror=null; this.src='/studio-assets/mhpartners-logo.svg';" data-astro-cid-7da3lww3 style="height: 38px; width: auto; max-width: 220px; object-fit: contain;"> </a> <!-- Breadcrumb Navigation --> <div class="flex items-center gap-4" data-astro-cid-7da3lww3> <a href="/#apps" class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-slate-300 hover:text-white hover:border-white/20 transition-all" data-astro-cid-7da3lww3> <i data-lucide="arrow-left" class="size-3.5" data-astro-cid-7da3lww3></i> <span data-astro-cid-7da3lww3>All Apps</span> </a>  </div> </div> </header> <main class="max-w-7xl mx-auto px-6 sm:px-8 pt-12 sm:pt-16 pb-28 space-y-24" data-astro-cid-7da3lww3> <!-- APP HERO SECTION --> <section class="space-y-8" data-astro-cid-7da3lww3> <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pb-10 border-b border-white/[0.08]" data-astro-cid-7da3lww3> <!-- App Title & Icon Block --> <div class="flex items-start sm:items-center gap-6" data-astro-cid-7da3lww3> <div class="relative size-20 sm:size-24 rounded-3xl bg-amber-500/10 border border-amber-500/25 p-1 flex items-center justify-center text-amber-400 shadow-2xl shrink-0" style="color: var(--color-primary); border-color: rgba(245, 158, 11, 0.3);" data-astro-cid-7da3lww3> <img src="/studio-assets/cAb5RMm0Zol.jpeg" alt="Square Flip Icon" class="size-full object-cover rounded-2xl" data-astro-cid-7da3lww3> </div> <div class="space-y-2" data-astro-cid-7da3lww3> <div class="flex flex-wrap items-center gap-2.5" data-astro-cid-7da3lww3> <span class="rounded-full bg-amber-500/10 border border-amber-500/20 px-3 py-0.5 text-xs font-mono font-semibold text-amber-400" style="color: var(--color-primary);" data-astro-cid-7da3lww3> Games &amp; Entertainment </span> <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 px-3 py-0.5 text-xs font-mono text-emerald-400" data-astro-cid-7da3lww3> <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse" data-astro-cid-7da3lww3></span> <span data-astro-cid-7da3lww3>Live on Play Store</span> </span>  </div> <h1 class="font-heading text-3xl sm:text-5xl font-extrabold tracking-tight text-white" data-astro-cid-7da3lww3> Square Flip </h1> <p class="text-base sm:text-lg text-slate-400 font-light max-w-2xl" data-astro-cid-7da3lww3> Minimalist logic grid puzzle game with fluid flip mechanics, vibrant themes and offline play </p> </div> </div> <!-- Download & Store CTA Actions --> <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full lg:w-auto shrink-0" data-astro-cid-7da3lww3> <div class="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-center" data-astro-cid-7da3lww3> <span class="text-xs font-mono text-amber-400" style="color: var(--color-primary);" data-astro-cid-7da3lww3>Upcoming Release · Early Access Soon</span> </div> <a href="/apps/squareflip/privacy-policy.html" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/[0.03] px-6 py-4 text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/10 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="shield-check" class="size-4 text-slate-400" data-astro-cid-7da3lww3></i> <span data-astro-cid-7da3lww3>Privacy Policy</span> </a> </div> </div> <!-- Quick Metrics Ribbon --> <div class="grid gap-4 text-xs font-mono grid-cols-1 sm:grid-cols-3" data-astro-cid-7da3lww3>  <div class="atelier-card rounded-xl p-3.5" data-astro-cid-7da3lww3> <span class="text-slate-500 block" data-astro-cid-7da3lww3>Package ID</span> <span class="font-mono text-xs font-semibold text-slate-200 mt-1 block truncate" data-astro-cid-7da3lww3>net.vertexapps.squareflip</span> </div> <div class="atelier-card rounded-xl p-3.5" data-astro-cid-7da3lww3> <span class="text-slate-500 block" data-astro-cid-7da3lww3>Architecture</span> <span class="font-mono text-xs font-semibold text-slate-200 mt-1 block" data-astro-cid-7da3lww3>100% Native Kotlin</span> </div> <div class="atelier-card rounded-xl p-3.5" data-astro-cid-7da3lww3> <span class="text-slate-500 block" data-astro-cid-7da3lww3>Telemetry</span> <span class="font-mono text-xs font-semibold text-emerald-400 mt-1 block" data-astro-cid-7da3lww3>Zero Trackers (E2E)</span> </div> </div> </section> <!-- SCREENSHOT GALLERY (Interactive Carousel & Lightbox Preview) --> <section class="space-y-6" data-astro-cid-7da3lww3> <div class="flex items-center justify-between" data-astro-cid-7da3lww3> <div data-astro-cid-7da3lww3> <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+</head> <body class="selection:bg-amber-500/30 selection:text-amber-200" data-astro-cid-7da3lww3> <div class="fixed inset-0 bg-grid pointer-events-none -z-20" data-astro-cid-7da3lww3></div> <!-- Ambient Backdrop Lights --> <div class="fixed top-0 left-1/4 size-[600px] rounded-full glow-primary pointer-events-none -z-10 blur-3xl opacity-50" data-astro-cid-7da3lww3></div> <div class="fixed top-1/3 right-10 size-[500px] rounded-full glow-accent pointer-events-none -z-10 blur-3xl opacity-40" data-astro-cid-7da3lww3></div> <!-- Header --> <header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#0A0B0E]/85 backdrop-blur-xl" data-astro-cid-7da3lww3> <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-8" data-astro-cid-7da3lww3> <!-- Brand Logo (Full SVG from Backend) --> <a href="/" class="group flex items-center" title="MHPartners" data-astro-cid-7da3lww3> <img src="/studio-assets/mhpartners-logo.svg" alt="MHPartners" class="h-9 sm:h-10 w-auto max-w-[220px] object-contain transition-transform duration-200 group-hover:scale-105" onerror="this.onerror=null; this.src='/studio-assets/mhpartners-logo.svg';" data-astro-cid-7da3lww3 style="height: 38px; width: auto; max-width: 220px; object-fit: contain;"> </a> <!-- Breadcrumb Navigation --> <div class="flex items-center gap-4" data-astro-cid-7da3lww3> <a href="/#apps" class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-slate-300 hover:text-white hover:border-white/20 transition-all" data-astro-cid-7da3lww3> <i data-lucide="arrow-left" class="size-3.5" data-astro-cid-7da3lww3></i> <span data-astro-cid-7da3lww3>All Apps</span> </a>  </div> </div> </header> <main class="max-w-7xl mx-auto px-6 sm:px-8 pt-12 sm:pt-16 pb-28 space-y-24" data-astro-cid-7da3lww3> <!-- APP HERO SECTION --> <section class="space-y-8" data-astro-cid-7da3lww3>
+  <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pb-10 border-b border-white/[0.08]" data-astro-cid-7da3lww3>
+    <!-- App Title & Icon Block -->
+    <div class="flex items-start sm:items-center gap-6" data-astro-cid-7da3lww3>
+      <div class="relative size-20 sm:size-24 rounded-3xl bg-amber-500/10 border border-amber-500/25 p-1 flex items-center justify-center text-amber-400 shadow-2xl shrink-0" style="color: var(--color-primary); border-color: rgba(245, 158, 11, 0.3);" data-astro-cid-7da3lww3>
+        <img src="/studio-assets/cAb5RMm0Zol.jpeg" alt="Square Flip Icon" class="size-full object-cover rounded-2xl" data-astro-cid-7da3lww3>
+      </div>
+      <div class="space-y-2" data-astro-cid-7da3lww3>
+        <div class="flex flex-wrap items-center gap-2.5" data-astro-cid-7da3lww3>
+          <span class="rounded-full bg-amber-500/10 border border-amber-500/20 px-3 py-0.5 text-xs font-mono font-semibold text-amber-400" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+            Games &amp; Entertainment
+          </span>
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 px-3 py-0.5 text-xs font-mono text-emerald-400" data-astro-cid-7da3lww3>
+            <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse" data-astro-cid-7da3lww3></span>
+            <span data-astro-cid-7da3lww3>Live on Play Store</span>
+          </span>
+        </div>
+        <h1 class="font-heading text-3xl sm:text-5xl font-extrabold tracking-tight text-white" data-astro-cid-7da3lww3>
+          Square Flip
+        </h1>
+        <p class="text-base sm:text-lg text-slate-400 font-light max-w-2xl" data-astro-cid-7da3lww3>
+          Minimalist neon grid puzzle game with 140+ handcrafted puzzles, Blitz Rush, and smart board-reading hints
+        </p>
+      </div>
+    </div>
+    <!-- Download & Store CTA Actions -->
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full lg:w-auto shrink-0" data-astro-cid-7da3lww3>
+      <div class="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-center" data-astro-cid-7da3lww3>
+        <span class="text-xs font-mono text-amber-400" style="color: var(--color-primary);" data-astro-cid-7da3lww3>Upcoming Release &middot; Early Access Soon</span>
+      </div>
+      <a href="/apps/square-flip/privacy-policy.html" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/[0.03] px-6 py-4 text-sm font-semibold text-slate-300 hover:text-white hover:bg-white/10 transition-colors" data-astro-cid-7da3lww3>
+        <i data-lucide="shield-check" class="size-4 text-slate-400" data-astro-cid-7da3lww3></i>
+        <span data-astro-cid-7da3lww3>Privacy Policy</span>
+      </a>
+    </div>
+  </div>
+  <!-- Quick Metrics Ribbon -->
+  <div class="grid gap-4 text-xs font-mono grid-cols-1 sm:grid-cols-3" data-astro-cid-7da3lww3>
+    <div class="atelier-card rounded-xl p-3.5" data-astro-cid-7da3lww3>
+      <span class="text-slate-500 block" data-astro-cid-7da3lww3>Package ID</span>
+      <span class="font-mono text-xs font-semibold text-slate-200 mt-1 block truncate" data-astro-cid-7da3lww3>net.vertexapps.squareflip</span>
+    </div>
+    <div class="atelier-card rounded-xl p-3.5" data-astro-cid-7da3lww3>
+      <span class="text-slate-500 block" data-astro-cid-7da3lww3>Architecture</span>
+      <span class="font-mono text-xs font-semibold text-slate-200 mt-1 block" data-astro-cid-7da3lww3>100% Native Kotlin</span>
+    </div>
+    <div class="atelier-card rounded-xl p-3.5" data-astro-cid-7da3lww3>
+      <span class="text-slate-500 block" data-astro-cid-7da3lww3>Monetization</span>
+      <span class="font-mono text-xs font-semibold text-amber-400 mt-1 block" data-astro-cid-7da3lww3>Google AdMob (Rewarded &amp; Banners)</span>
+    </div>
+  </div>
+</section> <!-- SCREENSHOT GALLERY (Interactive Carousel & Lightbox Preview) --> <section class="space-y-6" data-astro-cid-7da3lww3> <div class="flex items-center justify-between" data-astro-cid-7da3lww3> <div data-astro-cid-7da3lww3> <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
 VISUAL WALKTHROUGH
 </span> <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white mt-1" data-astro-cid-7da3lww3>
 Interface &amp; Screenshot Gallery
-</h2> </div> <div class="flex items-center gap-2" data-astro-cid-7da3lww3> <button id="galleryScrollPrev" class="size-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:border-white/30 transition-all" data-astro-cid-7da3lww3> <i data-lucide="chevron-left" class="size-5" data-astro-cid-7da3lww3></i> </button> <button id="galleryScrollNext" class="size-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:border-white/30 transition-all" data-astro-cid-7da3lww3> <i data-lucide="chevron-right" class="size-5" data-astro-cid-7da3lww3></i> </button> </div> </div> <!-- Horizontal Swipeable Gallery --> <div id="galleryContainer" class="gallery-scroller flex gap-6 overflow-x-auto pb-6 scroll-smooth" data-astro-cid-7da3lww3> <div class="relative shrink-0 w-64 sm:w-72 rounded-[2.5rem] border-[6px] border-slate-800 bg-[#0A0B0E] p-3 shadow-2xl overflow-hidden group cursor-pointer screenshot-item" data-img="/studio-assets/cAb5RMm0Zol.jpeg" data-astro-cid-7da3lww3> <!-- Device Notch --> <div class="w-20 h-3.5 bg-slate-800 rounded-b-lg mx-auto mb-2 flex items-center justify-center" data-astro-cid-7da3lww3> <span class="size-1.5 rounded-full bg-slate-900" data-astro-cid-7da3lww3></span> </div> <div class="relative aspect-[9/16] overflow-hidden rounded-2xl bg-slate-900" data-astro-cid-7da3lww3> <img src="/studio-assets/cAb5RMm0Zol.jpeg" alt="Square Flip Screenshot 1" class="size-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='/studio-assets/fqomhxrexUG.jpeg'" data-astro-cid-7da3lww3> <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" data-astro-cid-7da3lww3> <span class="px-3 py-1.5 rounded-full bg-black/70 backdrop-blur text-xs font-mono text-white flex items-center gap-1.5" data-astro-cid-7da3lww3> <i data-lucide="zoom-in" class="size-3.5" data-astro-cid-7da3lww3></i> <span data-astro-cid-7da3lww3>Zoom</span> </span> </div> </div> </div><div class="relative shrink-0 w-64 sm:w-72 rounded-[2.5rem] border-[6px] border-slate-800 bg-[#0A0B0E] p-3 shadow-2xl overflow-hidden group cursor-pointer screenshot-item" data-img="/studio-assets/fqomhxrexUG.jpeg" data-astro-cid-7da3lww3> <!-- Device Notch --> <div class="w-20 h-3.5 bg-slate-800 rounded-b-lg mx-auto mb-2 flex items-center justify-center" data-astro-cid-7da3lww3> <span class="size-1.5 rounded-full bg-slate-900" data-astro-cid-7da3lww3></span> </div> <div class="relative aspect-[9/16] overflow-hidden rounded-2xl bg-slate-900" data-astro-cid-7da3lww3> <img src="/studio-assets/fqomhxrexUG.jpeg" alt="Square Flip Screenshot 2" class="size-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='/studio-assets/fqomhxrexUG.jpeg'" data-astro-cid-7da3lww3> <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" data-astro-cid-7da3lww3> <span class="px-3 py-1.5 rounded-full bg-black/70 backdrop-blur text-xs font-mono text-white flex items-center gap-1.5" data-astro-cid-7da3lww3> <i data-lucide="zoom-in" class="size-3.5" data-astro-cid-7da3lww3></i> <span data-astro-cid-7da3lww3>Zoom</span> </span> </div> </div> </div> </div> </section> <!-- WHAT'S NEW IN LATEST RELEASE (If available) -->  <section class="atelier-card rounded-3xl p-6 sm:p-8 border-amber-500/25 bg-gradient-to-br from-amber-500/[0.05] via-[#12151B] to-[#0A0B0E] relative overflow-hidden space-y-5 shadow-2xl" data-astro-cid-7da3lww3> <div class="flex items-center gap-3.5" data-astro-cid-7da3lww3> <div class="size-11 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0 shadow-inner" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="sparkles" class="size-5" data-astro-cid-7da3lww3></i> </div> <div data-astro-cid-7da3lww3> <div class="flex items-center gap-2" data-astro-cid-7da3lww3> <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20" data-astro-cid-7da3lww3>Upcoming Release</span> <span class="text-xs font-mono text-slate-400" data-astro-cid-7da3lww3>v1.0.0</span> </div> <h3 class="font-heading text-xl sm:text-2xl font-bold text-white mt-0.5" data-astro-cid-7da3lww3>Release Highlights</h3> </div> </div> <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-2" data-astro-cid-7da3lww3> <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Full Urdu alphabet layout with authentic special characters (ښ, ږ, څ, ځ, ڼ, ۍ, ئ)</span> </div><div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Seamless dual Urdu &amp; English typing with 1-tap language toggle</span> </div><div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>AI writing assistant for grammar correction and smart replies</span> </div><div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Contextual word prediction and sentence autocompletion</span> </div><div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>High-accuracy Urdu &amp; English voice typing transcription</span> </div><div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Built-in real-time translator between Urdu and English</span> </div><div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>100+ designer themes (AMOLED dark, minimal, gradient &amp; calligraphy)</span> </div><div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Standard, Legacy, and Compact custom keyboard layouts</span> </div><div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3> <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i> <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>In-chat quick calculator and custom Urdu stickers</span> </div> </div> </section>       <!-- CORE CAPABILITIES GRID (For Keyboard Apps) --> <section class="space-y-8" data-astro-cid-7da3lww3> <div data-astro-cid-7da3lww3> <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
-KEY CAPABILITIES
-</span> <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-white mt-1" data-astro-cid-7da3lww3> Engineered for Modern Urdu &amp; English Communication </h2> <p class="text-sm text-slate-400 max-w-2xl mt-2 font-light" data-astro-cid-7da3lww3> Everything you need for daily typing, professional correspondence, Urdu special characters, AI writing assistance, and instant bilingual translation in one place. </p> </div> <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-astro-cid-7da3lww3> <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="keyboard" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Smart Dual-Language Typing </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Type in Urdu and English from one unified keyboard. Instantly toggle languages with a single tap while chatting, emailing, searching, or taking notes. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="languages" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Urdu Alphabet &amp; Letters </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Full support for authentic Urdu characters (ښ, ږ, څ, ځ, ڼ, ۍ, ئ) with dedicated keys and quick-access numeric rows. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="sparkles" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> AI Writing Assistant </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Improve writing directly from the keyboard: fix grammar and spelling, rewrite text, adjust tone, generate prompts, and craft professional replies. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="lightbulb" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Smart Autocomplete </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Intelligent word, phrase, and sentence prediction helps you type common Urdu and English expressions with significantly fewer taps. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="mic" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Dual Voice Typing </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Speak naturally in either Urdu or English. High-accuracy voice transcription with integrated AI rephrasing and editing tools. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="arrow-left-right" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Built-in Translator </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Translate Urdu ↔ English without switching apps. Includes translation history, voice translation, and 1-tap insert into your messages. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="palette" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> 100+ Designer Themes </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Choose from cultural calligraphy, luxury gold, AMOLED dark, minimal, gradient, flag, nature, cute, and colorful custom themes. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="sliders" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Layout Customization </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Choose Standard, Legacy, or Compact layouts. Adjust key height, spacing, toolbar buttons, and optional Urdu numeral rows. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="smile" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Urdu Stickers &amp; Phrases </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Rich library of Urdu greetings, everyday expressions, and emotion stickers, with custom sticker maker and WhatsApp sticker import. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="calculator" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> In-Chat Calculator </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Perform standard and scientific calculations directly within your keyboard and insert results into your message with a single tap. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="clipboard-list" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Clipboard &amp; Personal Lexicon </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Quickly access clipboard snippets, pin frequently used text, and manage your custom Urdu/English personal dictionary. </p> </div> </div><div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3> <div class="space-y-2.5" data-astro-cid-7da3lww3> <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3> <i data-lucide="shield-check" class="size-5" data-astro-cid-7da3lww3></i> </div> <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3> Privacy Controls &amp; Private Mode </h4> <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3> Operate with complete confidence. Private Mode keeps your keystrokes and sensitive typing localized strictly to your device. </p> </div> </div> </div> </section> <!-- NARRATIVE & KEY FEATURES --> <section class="grid lg:grid-cols-12 gap-12 items-start" data-astro-cid-7da3lww3> <!-- Left Column: Story & Long Description --> <div class="lg:col-span-7 space-y-8" data-astro-cid-7da3lww3> <div data-astro-cid-7da3lww3> <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
-PRODUCT OVERVIEW
-</span> <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white mt-1" data-astro-cid-7da3lww3>
-Built for precision, speed, and focus
-</h2> </div> <div class="prose prose-invert max-w-none text-slate-300 text-sm sm:text-base leading-relaxed space-y-4 font-light" data-astro-cid-7da3lww3> <p class="leading-relaxed" data-astro-cid-7da3lww3>Square Flip is a smart Urdu keyboard for Android. Type easily and naturally in Urdu and English, access full Urdu alphabet characters (ښ, ږ, څ, ځ, ڼ, ۍ, ئ), get smart suggestions and autocomplete, use dual voice typing, translate languages, improve writing with AI tools, calculate without leaving chat, and customize your keyboard your way.</p><p class="leading-relaxed" data-astro-cid-7da3lww3>⌨️ Smart Urdu &amp; English Keyboard:
-Type in Urdu and English from one unified keyboard and quickly toggle between languages while chatting, writing emails, searching, taking notes, or using social media.</p><p class="leading-relaxed" data-astro-cid-7da3lww3>🔤 Full Urdu Alphabet &amp; Special Characters:
-Quick access to authentic Urdu letters including ښ, ږ, څ, ځ, ڼ, ۍ, ئ with intuitive placement and dedicated numeral options.</p><p class="leading-relaxed" data-astro-cid-7da3lww3>✨ AI Writing Assistant:
-Enhance writing directly from the keyboard: rephrase text, fix grammar, adjust tone, and generate prompt-based responses.</p><p class="leading-relaxed" data-astro-cid-7da3lww3>💡 Smart Suggestions &amp; Word Prediction:
-Type faster with smart suggestions and predictive word completion tailored for conversational and formal Urdu.</p><p class="leading-relaxed" data-astro-cid-7da3lww3>🎙️ Urdu &amp; English Voice Typing:
-Speak naturally instead of typing in both Urdu and English with accurate on-device transcription.</p><p class="leading-relaxed" data-astro-cid-7da3lww3>🌐 Built-in Translator:
-Translate between Urdu, English, and other major languages directly from the keyboard.</p><p class="leading-relaxed" data-astro-cid-7da3lww3>🎨 100+ Designer Keyboard Themes:
-Choose from rich gradient, AMOLED dark, minimal, calligraphy, and cultural themes with customizable key styles.</p> <p data-astro-cid-7da3lww3>
-At MHPartners, every release adheres to our strict atelier engineering manifesto: zero third-party tracking libraries, zero invasive advertising banners, and instant sub-millisecond cold starts. We leverage Kotlin Coroutines and native Jetpack Compose to deliver responsive tactile touch feedback.
-</p> </div> <!-- Key Features Checklist --> <div class="space-y-4 pt-4" data-astro-cid-7da3lww3> <h3 class="font-heading text-lg font-bold text-white" data-astro-cid-7da3lww3>Distinctive Features</h3> <div class="grid sm:grid-cols-2 gap-3.5" data-astro-cid-7da3lww3> <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Smart Dual-Language Urdu &amp; English Typing</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Full Urdu Alphabet with Special Characters (ښ, ږ, څ, ځ, ڼ, ۍ, ئ)</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>AI Writing Assistant (Grammar, Rephrase, Replies)</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Smart Autocomplete &amp; Sentence Suggestions</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Urdu &amp; English Voice Speech-to-Text</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Built-in Urdu ↔ English Translator</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>100+ Designer Keyboard Themes</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Standard, Legacy &amp; Compact Custom Layouts</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Urdu Stickers, Greetings &amp; WhatsApp Import</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Built-in Quick &amp; Scientific Calculator</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Clipboard Manager &amp; Personal Dictionary</span> </div><div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3> <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Private Mode with On-Device Privacy Controls</span> </div> </div> </div> </div> <!-- Right Column: Technical Architecture & System Specs --> <div class="lg:col-span-5 space-y-6" data-astro-cid-7da3lww3> <div class="atelier-card rounded-2xl p-6 space-y-5" data-astro-cid-7da3lww3> <h3 class="font-heading text-lg font-bold text-white border-b border-white/10 pb-3 flex items-center gap-2" data-astro-cid-7da3lww3> <i data-lucide="cpu" class="size-4 text-amber-400" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i> <span data-astro-cid-7da3lww3>Engineering Specifications</span> </h3> <div class="space-y-3.5 text-xs font-mono" data-astro-cid-7da3lww3> <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3> <span class="text-slate-400" data-astro-cid-7da3lww3>Target OS</span> <span class="font-bold text-white" data-astro-cid-7da3lww3>Android 8.0+ (API 26)</span> </div> <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3> <span class="text-slate-400" data-astro-cid-7da3lww3>Language</span> <span class="font-bold text-white" data-astro-cid-7da3lww3>Kotlin 2.0+ Native</span> </div> <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3> <span class="text-slate-400" data-astro-cid-7da3lww3>UI Toolkit</span> <span class="font-bold text-white" data-astro-cid-7da3lww3>Jetpack Compose &amp; Material 3</span> </div> <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3> <span class="text-slate-400" data-astro-cid-7da3lww3>Persistence</span> <span class="font-bold text-white" data-astro-cid-7da3lww3>Encrypted Room SQLite</span> </div> <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3> <span class="text-slate-400" data-astro-cid-7da3lww3>Telemetry</span> <span class="font-bold text-emerald-400" data-astro-cid-7da3lww3>0 Trackers / 100% Private</span> </div> <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3> <span class="text-slate-400" data-astro-cid-7da3lww3>Version</span> <span class="font-bold text-white" data-astro-cid-7da3lww3>1.0.0</span> </div> </div> </div> <!-- Privacy Assurance Card --> <div class="atelier-card rounded-2xl p-6 space-y-3 border-emerald-500/20 bg-emerald-950/10" data-astro-cid-7da3lww3> <div class="flex items-center gap-2.5 text-emerald-400" data-astro-cid-7da3lww3> <i data-lucide="shield-check" class="size-5" data-astro-cid-7da3lww3></i> <h4 class="font-heading text-sm font-bold" data-astro-cid-7da3lww3>Privacy &amp; Security Compliance</h4> </div> <p class="text-xs text-slate-300 leading-relaxed" data-astro-cid-7da3lww3>
-This app does not sell, transfer, or upload your personal device usage data. All calculations and storage remain local to your Android hardware.
-</p> <a href="/apps/squareflip/privacy-policy.html" class="text-xs font-mono text-emerald-400 hover:underline block pt-1" data-astro-cid-7da3lww3>
-Read complete privacy declaration →
-</a> </div> </div> </section> <!-- APP REVIEWS & FEEDBACK -->  <!-- EXPLORE MORE STUDIO APPS --> <section class="space-y-8 pt-12 border-t border-white/[0.08]" data-astro-cid-7da3lww3> <div class="flex items-center justify-between" data-astro-cid-7da3lww3> <div data-astro-cid-7da3lww3> <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+</h2> </div> <div class="flex items-center gap-2" data-astro-cid-7da3lww3> <button id="galleryScrollPrev" class="size-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:border-white/30 transition-all" data-astro-cid-7da3lww3> <i data-lucide="chevron-left" class="size-5" data-astro-cid-7da3lww3></i> </button> <button id="galleryScrollNext" class="size-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-slate-300 hover:text-white hover:border-white/30 transition-all" data-astro-cid-7da3lww3> <i data-lucide="chevron-right" class="size-5" data-astro-cid-7da3lww3></i> </button> </div> </div> <!-- Horizontal Swipeable Gallery --> <div id="galleryContainer" class="gallery-scroller flex gap-6 overflow-x-auto pb-6 scroll-smooth" data-astro-cid-7da3lww3> <div class="relative shrink-0 w-64 sm:w-72 rounded-[2.5rem] border-[6px] border-slate-800 bg-[#0A0B0E] p-3 shadow-2xl overflow-hidden group cursor-pointer screenshot-item" data-img="/studio-assets/cAb5RMm0Zol.jpeg" data-astro-cid-7da3lww3> <!-- Device Notch --> <div class="w-20 h-3.5 bg-slate-800 rounded-b-lg mx-auto mb-2 flex items-center justify-center" data-astro-cid-7da3lww3> <span class="size-1.5 rounded-full bg-slate-900" data-astro-cid-7da3lww3></span> </div> <div class="relative aspect-[9/16] overflow-hidden rounded-2xl bg-slate-900" data-astro-cid-7da3lww3> <img src="/studio-assets/cAb5RMm0Zol.jpeg" alt="Square Flip Screenshot 1" class="size-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='/studio-assets/fqomhxrexUG.jpeg'" data-astro-cid-7da3lww3> <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" data-astro-cid-7da3lww3> <span class="px-3 py-1.5 rounded-full bg-black/70 backdrop-blur text-xs font-mono text-white flex items-center gap-1.5" data-astro-cid-7da3lww3> <i data-lucide="zoom-in" class="size-3.5" data-astro-cid-7da3lww3></i> <span data-astro-cid-7da3lww3>Zoom</span> </span> </div> </div> </div><div class="relative shrink-0 w-64 sm:w-72 rounded-[2.5rem] border-[6px] border-slate-800 bg-[#0A0B0E] p-3 shadow-2xl overflow-hidden group cursor-pointer screenshot-item" data-img="/studio-assets/fqomhxrexUG.jpeg" data-astro-cid-7da3lww3> <!-- Device Notch --> <div class="w-20 h-3.5 bg-slate-800 rounded-b-lg mx-auto mb-2 flex items-center justify-center" data-astro-cid-7da3lww3> <span class="size-1.5 rounded-full bg-slate-900" data-astro-cid-7da3lww3></span> </div> <div class="relative aspect-[9/16] overflow-hidden rounded-2xl bg-slate-900" data-astro-cid-7da3lww3> <img src="/studio-assets/fqomhxrexUG.jpeg" alt="Square Flip Screenshot 2" class="size-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='/studio-assets/fqomhxrexUG.jpeg'" data-astro-cid-7da3lww3> <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" data-astro-cid-7da3lww3> <span class="px-3 py-1.5 rounded-full bg-black/70 backdrop-blur text-xs font-mono text-white flex items-center gap-1.5" data-astro-cid-7da3lww3> <i data-lucide="zoom-in" class="size-3.5" data-astro-cid-7da3lww3></i> <span data-astro-cid-7da3lww3>Zoom</span> </span> </div> </div> </div> </div> </section> <!-- WHAT'S NEW IN LATEST RELEASE (If available) -->  <section class="atelier-card rounded-3xl p-6 sm:p-8 border-amber-500/25 bg-gradient-to-br from-amber-500/[0.05] via-[#12151B] to-[#0A0B0E] relative overflow-hidden space-y-5 shadow-2xl" data-astro-cid-7da3lww3>
+  <div class="flex items-center gap-3.5" data-astro-cid-7da3lww3>
+    <div class="size-11 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0 shadow-inner" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+      <i data-lucide="sparkles" class="size-5" data-astro-cid-7da3lww3></i>
+    </div>
+    <div data-astro-cid-7da3lww3>
+      <div class="flex items-center gap-2" data-astro-cid-7da3lww3>
+        <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20" data-astro-cid-7da3lww3>Upcoming Release</span>
+        <span class="text-xs font-mono text-slate-400" data-astro-cid-7da3lww3>v1.0.0</span>
+      </div>
+      <h3 class="font-heading text-xl sm:text-2xl font-bold text-white mt-0.5" data-astro-cid-7da3lww3>Release Highlights</h3>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-2" data-astro-cid-7da3lww3>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>120 Handcrafted Classic puzzles with grids scaling from 4&times;4 up to 9&times;9</span>
+    </div>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>20 Mosaic Art picture puzzles: Hearts, Stars, Crowns, Keys &amp; Spirals</span>
+    </div>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>60-Second Blitz Rush race with quick solve combo chains up to 5&times;</span>
+    </div>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Smart hints that read your board to show optimal next moves or recommend restart</span>
+    </div>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Unlimited undo and instant level restart with zero move penalties</span>
+    </div>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>3-Star rating system based on move efficiency and detailed player statistics</span>
+    </div>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Glowing neon look: glossy tiles, animated backgrounds, bursts &amp; confetti celebrations</span>
+    </div>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Relaxing background music, sound effects &amp; in-game music volume slider</span>
+    </div>
+    <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-2.5 hover:border-amber-500/30 transition-colors" data-astro-cid-7da3lww3>
+      <i data-lucide="check" class="size-4 text-emerald-400 shrink-0 mt-0.5" data-astro-cid-7da3lww3></i>
+      <span class="text-xs text-slate-300 font-light leading-relaxed" data-astro-cid-7da3lww3>Fair, optional rewarded ads: unlock extra hints or get +15s Blitz time</span>
+    </div>
+  </div>
+</section>       <!-- CORE CAPABILITIES GRID (For Keyboard Apps) --> <section class="space-y-8" data-astro-cid-7da3lww3>
+  <div data-astro-cid-7da3lww3>
+    <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+      KEY CAPABILITIES
+    </span>
+    <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-white mt-1" data-astro-cid-7da3lww3>
+      Engineered for Addictive Geometric Logic &amp; Speed
+    </h2>
+    <p class="text-sm text-slate-400 max-w-2xl mt-2 font-light" data-astro-cid-7da3lww3>
+      Everything you need for satisfying puzzle solving: 140 handcrafted levels, 60-second Blitz runs, intelligent board-reading hints, and responsive tactile flip mechanics.
+    </p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-astro-cid-7da3lww3>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="grid" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Classic Mode (120 Levels)
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          120 hand-made puzzles. Draw a square to flip every tile inside it and turn the whole board white. Grids grow from 4&times;4 up to 9&times;9.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="palette" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Mosaic Art (20 Puzzles)
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          20 picture puzzles. Flip tiles to recreate charming target shapes: hearts, stars, crowns, keys, spirals, and more.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="zap" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Blitz Rush (60s Race)
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          A 60-second race against the clock. Solve as many puzzles as you can and chain quick solves into combos (up to 5&times;) to set high scores.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="lightbulb" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Board-Reading Hints
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Intelligent hints evaluate your current board state and show the best next move. If restarting is faster, the game lets you know!
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="rotate-ccw" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Unlimited Undo &amp; Restart
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Experiment without fear. Step backward one move at a time or restart the board instantly with a single tap and zero penalty.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="star" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          3-Star Rating &amp; Statistics
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Beat the target move count for a perfect 3-star score. Comprehensive stats track your lowest moves, stars earned, and Blitz records.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="sparkles" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Glowing Neon Aesthetics
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Vibrant atelier visual polish with glossy tiles, animated backgrounds, tactile flip bursts, and euphoric victory confetti animations.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="volume-2" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Sound &amp; Music Volume Slider
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Relaxing background music and satisfying sound effects, each with its own toggle, plus an in-game music volume slider.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="smartphone" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Tactile Haptic Feedback
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Feel every tile flip with responsive physical vibration impulses that bring the tactile satisfaction of physical puzzles to your screen.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="wifi-off" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          100% Offline Playability
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Progress saves automatically and the game is fully playable offline without internet. Ads need a connection; the game does not.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="gift" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Fair, Optional Rewards
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Watch an ad only if you want to: unlock extra hints (up to 2 per level) or gain +15 seconds when a Blitz run ends.
+        </p>
+      </div>
+    </div>
+    <div class="atelier-card rounded-2xl p-6 space-y-3 flex flex-col justify-between group hover:border-amber-500/40 transition-all shadow-lg" data-astro-cid-7da3lww3>
+      <div class="space-y-2.5" data-astro-cid-7da3lww3>
+        <div class="size-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+          <i data-lucide="shield-check" class="size-5" data-astro-cid-7da3lww3></i>
+        </div>
+        <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-400 transition-colors" data-astro-cid-7da3lww3>
+          Zero Accounts &amp; Privacy
+        </h4>
+        <p class="text-xs text-slate-400 leading-relaxed font-light" data-astro-cid-7da3lww3>
+          Zero personal data harvested. No accounts, sign-ins, or telemetry. All progression and settings remain on your physical hardware.
+        </p>
+      </div>
+    </div>
+  </div>
+</section> <!-- NARRATIVE & KEY FEATURES --> <section class="grid lg:grid-cols-12 gap-12 items-start" data-astro-cid-7da3lww3>
+  <!-- Left Column: Story & Long Description -->
+  <div class="lg:col-span-7 space-y-8" data-astro-cid-7da3lww3>
+    <div data-astro-cid-7da3lww3>
+      <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
+        PRODUCT OVERVIEW
+      </span>
+      <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white mt-1" data-astro-cid-7da3lww3>
+        Built for geometric logic, flow state, and speed
+      </h2>
+    </div>
+    <div class="prose prose-invert max-w-none text-slate-300 text-sm sm:text-base leading-relaxed space-y-4 font-light" data-astro-cid-7da3lww3>
+      <p class="leading-relaxed" data-astro-cid-7da3lww3>
+        Square Flip is an elegant and addictive neon grid puzzle game engineered for Android (package: <code class="text-amber-400 font-mono text-xs">net.vertexapps.squareflip</code>). Draw a square to flip every tile inside it, turn the whole board white, recreate artistic mosaic shapes, and race against the clock in high-intensity Blitz runs!
+      </p>
+      <p class="leading-relaxed" data-astro-cid-7da3lww3>
+        🧩 <strong>Three Ways to Play:</strong><br>
+        &bull; <strong>Classic:</strong> 120 hand-made puzzles. Draw a square to flip every tile inside it, and turn the whole board white. Grids grow from 4&times;4 up to 9&times;9.<br>
+        &bull; <strong>Mosaic Art:</strong> 20 picture puzzles. Flip tiles to recreate a target shape: hearts, stars, crowns, keys, a spiral and more.<br>
+        &bull; <strong>Blitz Rush:</strong> A 60-second race against the clock. Solve as many puzzles as you can and chain quick solves into combos (up to 5&times;). Boards get bigger as you go, and you can chase your high score.
+      </p>
+      <p class="leading-relaxed" data-astro-cid-7da3lww3>
+        💡 <strong>Smart Help &amp; Guided Learning:</strong><br>
+        &bull; <strong>Hints that read your board:</strong> they show the best next move from where you are, not from the start. If starting over is faster, the game tells you.<br>
+        &bull; <strong>Unlimited undo and instant restart:</strong> experiment without fear.<br>
+        &bull; <strong>A guided first level</strong> and a How to Play guide to jump straight into the action.
+      </p>
+      <p class="leading-relaxed" data-astro-cid-7da3lww3>
+        ⭐ <strong>Progress and Challenge:</strong><br>
+        &bull; <strong>3-star ratings:</strong> beat the target move count for a perfect score.<br>
+        &bull; <strong>Statistics:</strong> best moves, stars earned and Blitz records.<br>
+        &bull; <strong>Saved automatically</strong>, and fully playable offline. Ads need a connection; the game doesn't.
+      </p>
+      <p class="leading-relaxed" data-astro-cid-7da3lww3>
+        ✨ <strong>Look and Feel:</strong><br>
+        &bull; <strong>A glowing neon look:</strong> glossy tiles, animated backgrounds, flip bursts and confetti celebrations.<br>
+        &bull; <strong>Relaxing background music and satisfying sound effects</strong>, each with its own setting, plus a music volume slider.<br>
+        &bull; <strong>Haptic feedback</strong> on every move.
+      </p>
+      <p class="leading-relaxed" data-astro-cid-7da3lww3>
+        🎁 <strong>Fair, Optional Rewards:</strong><br>
+        &bull; <strong>Watch an ad, only if you want to:</strong> to unlock extra hints (up to 2 per level) or get +15 seconds when a Blitz run ends.
+      </p>
+    </div>
+    <!-- Key Features Checklist -->
+    <div class="space-y-4 pt-4" data-astro-cid-7da3lww3>
+      <h3 class="font-heading text-lg font-bold text-white" data-astro-cid-7da3lww3>Distinctive Features</h3>
+      <div class="grid sm:grid-cols-2 gap-3.5" data-astro-cid-7da3lww3>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Three Modes: Classic, Mosaic Art &amp; Blitz Rush</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>120 Classic Logic Levels (4&times;4 up to 9&times;9 Grids)</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>20 Mosaic Art Pixel Puzzles</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>60-Second Blitz Rush with up to 5&times; Combos</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Smart Hints That Read Your Live Board State</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Unlimited Undo &amp; Instant Board Restart</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>3-Star Rating System &amp; Player Statistics</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Glowing Neon Visuals &amp; Confetti Bursts</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Calming Music, Sound Effects &amp; Volume Slider</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Tactile Haptic Feedback on Every Flip</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>100% Offline Gameplay with Local Save</span>
+        </div>
+        <div class="atelier-card rounded-xl p-4 flex items-start gap-3" data-astro-cid-7da3lww3>
+          <i data-lucide="check-circle-2" class="size-4 text-amber-400 shrink-0 mt-0.5" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+          <span class="text-xs sm:text-sm text-slate-200" data-astro-cid-7da3lww3>Fair Rewarded Ads for Hints or +15s Blitz Time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Right Column: Technical Architecture & System Specs -->
+  <div class="lg:col-span-5 space-y-6" data-astro-cid-7da3lww3>
+    <div class="atelier-card rounded-2xl p-6 space-y-5" data-astro-cid-7da3lww3>
+      <h3 class="font-heading text-lg font-bold text-white border-b border-white/10 pb-3 flex items-center gap-2" data-astro-cid-7da3lww3>
+        <i data-lucide="cpu" class="size-4 text-amber-400" style="color: var(--color-primary);" data-astro-cid-7da3lww3></i>
+        <span data-astro-cid-7da3lww3>Engineering Specifications</span>
+      </h3>
+      <div class="space-y-3.5 text-xs font-mono" data-astro-cid-7da3lww3>
+        <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3>
+          <span class="text-slate-400" data-astro-cid-7da3lww3>Target OS</span>
+          <span class="font-bold text-white" data-astro-cid-7da3lww3>Android 8.0+ (API 26)</span>
+        </div>
+        <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3>
+          <span class="text-slate-400" data-astro-cid-7da3lww3>Language</span>
+          <span class="font-bold text-white" data-astro-cid-7da3lww3>Kotlin 2.0+ Native</span>
+        </div>
+        <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3>
+          <span class="text-slate-400" data-astro-cid-7da3lww3>UI Toolkit</span>
+          <span class="font-bold text-white" data-astro-cid-7da3lww3>Jetpack Compose &amp; Material 3</span>
+        </div>
+        <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3>
+          <span class="text-slate-400" data-astro-cid-7da3lww3>Persistence</span>
+          <span class="font-bold text-white" data-astro-cid-7da3lww3>Encrypted Room SQLite (Local)</span>
+        </div>
+        <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3>
+          <span class="text-slate-400" data-astro-cid-7da3lww3>Monetization</span>
+          <span class="font-bold text-amber-400" data-astro-cid-7da3lww3>Google AdMob (Rewarded &amp; Banners)</span>
+        </div>
+        <div class="flex items-center justify-between py-1 border-b border-white/5" data-astro-cid-7da3lww3>
+          <span class="text-slate-400" data-astro-cid-7da3lww3>Version</span>
+          <span class="font-bold text-white" data-astro-cid-7da3lww3>1.0.0</span>
+        </div>
+      </div>
+    </div>
+    <!-- Privacy Assurance Card -->
+    <div class="atelier-card rounded-2xl p-6 space-y-3 border-emerald-500/20 bg-emerald-950/10" data-astro-cid-7da3lww3>
+      <div class="flex items-center gap-2.5 text-emerald-400" data-astro-cid-7da3lww3>
+        <i data-lucide="shield-check" class="size-5" data-astro-cid-7da3lww3></i>
+        <h4 class="font-heading text-sm font-bold" data-astro-cid-7da3lww3>Privacy &amp; Security Compliance</h4>
+      </div>
+      <p class="text-xs text-slate-300 leading-relaxed" data-astro-cid-7da3lww3>
+        Square Flip collects zero personal data. All gameplay progress and settings are saved locally on your device, and advertising is powered transparently by Google AdMob.
+      </p>
+      <a href="/apps/square-flip/privacy-policy.html" class="text-xs font-mono text-emerald-400 hover:underline block pt-1" data-astro-cid-7da3lww3>
+        Read complete privacy declaration &rarr;
+      </a>
+    </div>
+  </div>
+</section> <!-- APP REVIEWS & FEEDBACK -->  <!-- EXPLORE MORE STUDIO APPS --> <section class="space-y-8 pt-12 border-t border-white/[0.08]" data-astro-cid-7da3lww3> <div class="flex items-center justify-between" data-astro-cid-7da3lww3> <div data-astro-cid-7da3lww3> <span class="text-xs font-mono font-semibold tracking-widest text-amber-400 uppercase" style="color: var(--color-primary);" data-astro-cid-7da3lww3>
 MORE FROM THE ATELIER
 </span> <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white mt-1" data-astro-cid-7da3lww3>
 Explore other studio releases
@@ -98,7 +498,7 @@ View all (4) →
           </a>
         
       </div>
-    </section> </main> <!-- LIGHTBOX MODAL --> <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden items-center justify-center p-4" data-astro-cid-7da3lww3> <button id="closeLightbox" class="absolute top-6 right-6 size-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-all" data-astro-cid-7da3lww3> <i data-lucide="x" class="size-6" data-astro-cid-7da3lww3></i> </button> <div class="max-w-md w-full max-h-[85vh] flex items-center justify-center" data-astro-cid-7da3lww3> <img id="lightboxImg" src="" alt="Zoomed Screenshot" class="max-h-[80vh] w-auto rounded-3xl shadow-2xl border-4 border-slate-800" data-astro-cid-7da3lww3> </div> </div> <!-- FOOTER --> <footer class="border-t border-white/[0.08] bg-[#07080A] py-16 px-6 sm:px-8" data-astro-cid-7da3lww3> <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500 font-mono" data-astro-cid-7da3lww3> <div class="flex items-center gap-3" data-astro-cid-7da3lww3> <a href="/" class="inline-block transition-transform hover:scale-105" title="MHPartners" data-astro-cid-7da3lww3> <img src="/studio-assets/mhpartners-logo.svg" alt="MHPartners" class="h-7 sm:h-8 w-auto max-w-[180px] object-contain" onerror="this.onerror=null; this.src='/studio-assets/mhpartners-logo.svg';" data-astro-cid-7da3lww3 style="height: 38px; width: auto; max-width: 220px; object-fit: contain;"> </a> </div> <div class="flex items-center gap-6" data-astro-cid-7da3lww3> <a href="/" class="hover:text-white transition-colors" data-astro-cid-7da3lww3>Home</a> <a href="/#apps" class="hover:text-white transition-colors" data-astro-cid-7da3lww3>The Collection</a> <a href="https://play.google.com/store/apps/developer?id=MHPartners&pli=1" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">Google Play</a> <a href="/apps/squareflip/privacy-policy.html" class="hover:text-white transition-colors" data-astro-cid-7da3lww3>Privacy</a> </div> <p data-astro-cid-7da3lww3>&copy; 2026 MHPartners. All rights reserved.</p> </div> </footer> <!-- Gallery & Lightbox Scripts --> <script>
+    </section> </main> <!-- LIGHTBOX MODAL --> <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden items-center justify-center p-4" data-astro-cid-7da3lww3> <button id="closeLightbox" class="absolute top-6 right-6 size-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-all" data-astro-cid-7da3lww3> <i data-lucide="x" class="size-6" data-astro-cid-7da3lww3></i> </button> <div class="max-w-md w-full max-h-[85vh] flex items-center justify-center" data-astro-cid-7da3lww3> <img id="lightboxImg" src="" alt="Zoomed Screenshot" class="max-h-[80vh] w-auto rounded-3xl shadow-2xl border-4 border-slate-800" data-astro-cid-7da3lww3> </div> </div> <!-- FOOTER --> <footer class="border-t border-white/[0.08] bg-[#07080A] py-16 px-6 sm:px-8" data-astro-cid-7da3lww3> <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500 font-mono" data-astro-cid-7da3lww3> <div class="flex items-center gap-3" data-astro-cid-7da3lww3> <a href="/" class="inline-block transition-transform hover:scale-105" title="MHPartners" data-astro-cid-7da3lww3> <img src="/studio-assets/mhpartners-logo.svg" alt="MHPartners" class="h-7 sm:h-8 w-auto max-w-[180px] object-contain" onerror="this.onerror=null; this.src='/studio-assets/mhpartners-logo.svg';" data-astro-cid-7da3lww3 style="height: 38px; width: auto; max-width: 220px; object-fit: contain;"> </a> </div> <div class="flex items-center gap-6" data-astro-cid-7da3lww3> <a href="/" class="hover:text-white transition-colors" data-astro-cid-7da3lww3>Home</a> <a href="/#apps" class="hover:text-white transition-colors" data-astro-cid-7da3lww3>The Collection</a> <a href="https://play.google.com/store/apps/developer?id=MHPartners&pli=1" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">Google Play</a> <a href="/apps/square-flip/privacy-policy.html" class="hover:text-white transition-colors" data-astro-cid-7da3lww3>Privacy</a> </div> <p data-astro-cid-7da3lww3>&copy; 2026 MHPartners. All rights reserved.</p> </div> </footer> <!-- Gallery & Lightbox Scripts --> <script>
     function initLucide() {
       if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
         lucide.createIcons();
